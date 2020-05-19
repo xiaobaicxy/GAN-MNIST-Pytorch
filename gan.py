@@ -2,7 +2,7 @@
 """
 Created on Fri May 15 09:26:17 2020
 GAN生成minist数据
-@author: 86186
+@author: 
 """
 
 import torch
