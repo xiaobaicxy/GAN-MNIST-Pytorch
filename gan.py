@@ -128,7 +128,7 @@ for epoch in range(epochs):
 z = torch.randn(1, latent_size).to(device)
 fake_images = G(z).view(28, 28).data.cpu().numpy()
 plt.imshow(fake_images)
-        
+plt.show()  
         
         
         
