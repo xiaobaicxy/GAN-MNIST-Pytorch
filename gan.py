@@ -76,8 +76,8 @@ dataloader = torch.utils.data.DataLoader(dataset=mnist_data,
                                          shuffle = True)
 
 total_step = len(dataloader)
-D = D(image_size, hidden_size)
-G = G(latent_size, hidden_size, image_size)
+D = D(image_size, hidden_size).to(device)
+G = G(latent_size, hidden_size, image_size).to(device)
 loss_func = nn.BCELoss()
 d_optimizer = torch.optim.Adam(D.parameters(), lr = lr)
 g_optimizer = torch.optim.Adam(G.parameters(), lr = lr)
